@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <script src="assets/js/jquery-3.6.3.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row" id="mainRow">
+        <div class="col-md-4">
+          <div class="row" id="calRow">
+            <div class="col-md-12 " id="calCol1">
+              <div class="clearfix"><img src="./assets/images/timer.png" alt="" width="30px"
+                  style="float: right;margin-top: 1%;cursor: pointer;"> </div>
+
+              <div style="height: 70px;"></div>
+              <input type="text" id="inp" readonly>
+            </div>
+            <div class="col-md-12" id="calCol2">
+              <table id="t">
+
+                <tbody>
+                 
+                  <tr>
+
+                    <td class="clear" colspan="2" >Clear</td>
+                    <td class="delete" colspan="2" >DEL</td>
+                    
+
+
+                  </tr>
+                
+              
+                  <tr>
+
+                    <td class="tdd num" data-num="1">1</td>
+                    <td class="tdd num" data-num="2">2</td>
+                    <td class="tdd num" data-num="3">3</td>
+                    <td class="tdd" data-num="/" id="div"> &#247;</td>
+
+                  </tr>
+                  <tr>
+                    <td class="tdd num" data-num="4">4</td>
+                    <td class="tdd num" data-num="5">5</td>
+                    <td class="tdd num" data-num="6">6</td>
+                    <td class="tdd" data-num="*">&#215;</td>
+
+
+                  </tr>
+                  <tr>
+
+                    <td class="tdd num" data-num="7">7</td>
+                    <td class="tdd num" data-num="8">8</td>
+                    <td class="tdd num" data-num="9">9</td>
+                    <td class="tdd"  data-num="+">+</td>
+
+                  </tr>
+                  <tr>
+
+                    <td class="tdd num" data-num="0">0</td>
+                    <td class="tdd num" data-num=".">&middot;</td>
+                    <td class="result">=</td>
+                    <td class="tdd"  data-num="-">-</td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1">
+           <ul id="calculation">
+
+            
+           </ul>   
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

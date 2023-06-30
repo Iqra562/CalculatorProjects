@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --blue : #8CA6DB;
+    --purple : #B993D6;
+    --white : white;
+}
+
+.container-fluid{
+    /* background: linear-gradient(to right,var(--blue),var(--purple)); */
+
+}
+#mainRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+#calRow{
+/* background-color: rgba(255, 255, 255,0.2); */
+height: auto;
+border-radius: 10px;
+background-color:rgb(104, 188, 216);
+
+}
+#calCol1{
+    height: 150px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+#calCol2{
+    cursor: pointer;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+padding: 0;
+}
+table {
+    box-sizing: border-box;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    border-collapse: separate;
+    padding: 2px;
+    border-spacing: 7px 7px;
+}
+
+tr{
+     box-sizing: border-box;
+     text-align: center;
+    background-color: rgba(255, 255, 255,0.2);
+    height: 60px;
+}
+.tdd ,.result,.clear,.delete{
+     width: 20%;
+     /* background-color: black; */
+     transition:   background-color 0.1s ease ;
+}
+/* .result{
+     transition:   background-color 0.1s ease ;
+}
+.clear{
+     transition:   background-color 0.1s ease ;
+} */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .tdd:active, .clear:active, .delete:active, .result:active{
+    background-color: rgba(255, 255, 255,0.5);
+  }
+ 
+  #inp{
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    font-family:sans-serif;
+  }
+  input:focus-visible {
+    outline: white;
+  }
+  li{
+    list-style-type: none;
+  }
