@@ -62,9 +62,9 @@ body {
 }
 .delete-icon {
   color: var(--mainRed);
-  cursor: pointer;
+  /* cursor: pointer; */
   font-size: 1rem;
-  text-decoration: none !important;
+  /* text-decoration: none !important; */
 }
 .edit-icon:hover {
   color: var(--mainBlue);
