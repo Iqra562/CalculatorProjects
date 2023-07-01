@@ -91,22 +91,20 @@ createElemennt.innerHTML +=`
 <div class="expense-icons list-item">
 
  
- <a href="#" id="delete-icon" data-id="${expense.id}">
+ <a href="#" id="delete-icon">
   <i class="fas fa-trash"></i>
  </a>
+ </div>
  </div>
  `
 //  outer element to append user expenses information 
 expenseOuter.append(createElemennt);
 // fucntion when user delete list item 
 deleteElement();
-// function when user update expenses 
-updateExpenseTitle();
-updateExpenseValue();
 // function to calculate expenses and balance
 calculateExpenseAndBalance();
-// expenseValue.value === "";
-// expenseText.value === "";
+expenseValue.value = "";
+expenseText.value = "";
 }
 /*function end */
 //  closure function to count expenses of list element and calculation of balance amount [start] //
@@ -158,54 +156,4 @@ function removeElement(event){
 
 }
 // function on delete item [end]//
-// function to update expense title[start]//
-function updateExpenseTitle() {
-    // let isInputEditing = false;
 
-    const listTitle = document.querySelectorAll('#expense-title');
-    listTitle.forEach(function (eachElementA) {
-        eachElementA.addEventListener('dblclick', function () {
-            if (!isInputEditing) {
-                isInputEditing = true;
-
-                const previousValue = eachElementA.innerHTML;
-                eachElementA.innerHTML = `<input class="changeValue" type="text" value="${previousValue}">`;
-
-                const changeValue = eachElementA.querySelector('.changeValue');
-                changeValue.addEventListener('blur', function () {
-                    const newValue = parseFloat(changeValue.value);
-                    eachElementA.innerHTML = `<span id="expense-title">   ${newValue} </span>`;
-                    isInputEditing = false;
-                    
-                });
-            }
-        });
-    });
-}
-// function to update expense title [end]//
-// function to update expense value [start]//
-function updateExpenseValue() {
-    let isInputEditing = false;
-
-    const listTitle = document.querySelectorAll('.expense-amount');
-    listTitle.forEach(function (eachElementA) {
-        eachElementA.addEventListener('dblclick', function () {
-            if (!isInputEditing) {
-                isInputEditing = true;
-
-                const previousValue = parseFloat(eachElementA.innerHTML);
-                eachElementA.innerHTML = `<input class="changeValue" type="number" value="${previousValue}">`;
-
-                const changeValue = eachElementA.querySelector('.changeValue');
-                changeValue.addEventListener('change', function () {
-                    const newValue = parseFloat(changeValue.value);
-                    eachElementA.innerHTML = `<h5 class="expense-amount mb-0 list-item">${newValue}</h5>`;
-                    isInputEditing = false;
-                    
-                });
-            }
-        });
-    });
-}
-
-// function to update expense value [end]//
